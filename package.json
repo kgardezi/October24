@@ -1,0 +1,11 @@
+{
+  "name": "idea-board",
+  "version": "2.0.0",
+  "description": "Self-hosted whiteboard for network diagrams with live team collaboration",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "engines": { "node": ">=18" }
+}

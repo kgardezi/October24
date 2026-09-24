@@ -1,0 +1,14 @@
+services:
+  idea-board:
+    build: .
+    image: idea-board:latest
+    container_name: idea-board
+    ports:
+      - "8080:8080"          # change the left number to use another port on the host
+    volumes:
+      - ideaboard-data:/data # all boards live here — back this up
+    restart: unless-stopped
+    stop_grace_period: 10s   # lets the server write any unsaved changes on shutdown
+
+volumes:
+  ideaboard-data:
